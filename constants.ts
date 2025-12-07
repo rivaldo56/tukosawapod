@@ -1,7 +1,7 @@
 import { Episode, CommunityPost } from './types';
 
 // Using a public domain MP3 for demo purposes.
-const SAMPLE_AUDIO = "https://www2.cs.uic.edu/~i101/SoundFiles/BabyElephantWalk60.wav"; 
+const SAMPLE_AUDIO = "https://www2.cs.uic.edu/~i101/SoundFiles/BabyElephantWalk60.wav";
 
 export const EPISODES: Episode[] = [
   {
@@ -67,10 +67,10 @@ export const EPISODES: Episode[] = [
 ];
 
 export const SOCIAL_LINKS = [
-  { name: 'Spotify', url: '#' },
-  { name: 'Instagram', url: 'https://instagram.com/tukosawapod' },
-  { name: 'TikTok', url: 'https://tiktok.com/@tukosawa' },
-  { name: 'X / Twitter', url: 'https://twitter.com/tukosawa' },
+  { name: 'Spotify', url: 'https://open.spotify.com/show/04RBxG9AOZWfjcbSxJ2XND?si=18937da7d5204a5b' },
+  { name: 'Instagram', url: 'https://www.instagram.com/itsjay.ke?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==' },
+  { name: 'TikTok', url: 'https://www.tiktok.com/@tukosawapodcast?' },
+  { name: 'X / Twitter', url: 'https://x.com/JayTukoSawa' },
   { name: 'YouTube', url: '#' },
 ];
 
