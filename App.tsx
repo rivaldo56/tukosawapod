@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 import { EPISODES, SOCIAL_LINKS, COMMUNITY_POSTS } from './constants';
 import { Episode } from './types';
 import VinylRecord from './components/VinylRecord';
@@ -85,7 +86,12 @@ const App: React.FC = () => {
             </span>
           </div>
 
-          <h1 className="font-display text-7xl md:text-8xl lg:text-9xl uppercase leading-none tracking-tighter text-tuko-cream drop-shadow-xl mb-10 space-y-2">
+          <motion.h1
+            className="font-display text-7xl md:text-8xl lg:text-9xl uppercase leading-none tracking-tighter text-tuko-cream drop-shadow-xl mb-10 space-y-2"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
             {(() => {
               const { epPrefix, firstHalf, secondHalf } = parseEpisodeTitle(currentEpisode.title);
               return (
@@ -96,11 +102,16 @@ const App: React.FC = () => {
                 </>
               );
             })()}
-          </h1>
+          </motion.h1>
 
-          <p className="font-body text-lg md:text-xl text-tuko-cream/80 max-w-md mb-10 leading-relaxed font-light">
+          <motion.p
+            className="font-body text-lg md:text-xl text-tuko-cream/80 max-w-md mb-10 leading-relaxed font-light"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
+          >
             <span className="text-tuko-yellow font-bold">///</span> {currentEpisode.description}
-          </p>
+          </motion.p>
 
           <div className="flex flex-col md:flex-row items-center gap-6 w-full md:w-auto">
             <button
@@ -318,8 +329,8 @@ const App: React.FC = () => {
               </div>
             </div>
             <div className="mt-20 text-xs font-mono text-neutral-600 flex flex-col gap-2 uppercase tracking-widest">
-              <span>© 2024 TUKO SAWA PODCAST.</span>
-              <span>ALL RIGHTS RESERVED. TUKO SAWA HATA KAMA TUNA PRETEND.</span>
+              <span>© 2025 TUKO SAWA PODCAST.</span>
+              <span>ALL RIGHTS RESERVED. TUKO SAWA.</span>
             </div>
           </div>
         </div>
