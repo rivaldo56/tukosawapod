@@ -6,8 +6,8 @@ const SAMPLE_AUDIO = "https://www2.cs.uic.edu/~i101/SoundFiles/BabyElephantWalk6
 export const EPISODES: Episode[] = [
   {
     id: '1',
-    title: 'THE TALKING STAGE',
-    description: 'Rivaldo and Ghost breakdown the absolute chaos of modern dating in Nairobi. When does "talking" actually mean you are together? We read your wildest DM screenshots.',
+    title: 'TUKO SAWA?',
+    description: 'Jay and Ghost breakdown the absolute chaos of modern dating in Nairobi. When does "talking" actually mean you are together? We read your wildest DM screenshots.',
     duration: '42:10',
     audioUrl: SAMPLE_AUDIO,
     artworkUrl: 'https://picsum.photos/id/338/600/600',
@@ -71,7 +71,7 @@ export const SOCIAL_LINKS = [
   { name: 'Instagram', url: 'https://www.instagram.com/itsjay.ke?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==' },
   { name: 'TikTok', url: 'https://www.tiktok.com/@tukosawapodcast?' },
   { name: 'X / Twitter', url: 'https://x.com/JayTukoSawa' },
-  { name: 'YouTube', url: '#' },
+  { name: 'YouTube', url: 'https://youtube.com/@TukoSawa' },
 ];
 
 export const COMMUNITY_POSTS: CommunityPost[] = [
@@ -102,7 +102,7 @@ export const COMMUNITY_POSTS: CommunityPost[] = [
   {
     id: 'p4',
     author: 'Sarah K.',
-    content: "Ghost needs his own stand-up special. The AI theory had me dying!",
+    content: "Ghost needs his own stand-up special. His advice is gold and his jokes iconic!",
     type: 'comment',
     rotation: 'rotate-2',
     color: 'bg-purple-200'

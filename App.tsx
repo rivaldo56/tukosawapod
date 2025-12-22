@@ -152,41 +152,62 @@ const App: React.FC = () => {
       />
 
       {/* About Section */}
-      <section className="bg-tuko-cream text-tuko-green py-24 px-6 relative">
-        <div className="absolute top-0 left-0 w-full h-4 bg-[repeating-linear-gradient(45deg,transparent,transparent_10px,#133B2E_10px,#133B2E_20px)] opacity-10"></div>
+      <section className="bg-neutral-900 text-tuko-cream py-24 px-6 relative overflow-hidden">
+        {/* Brick Wall Background */}
+        <div
+          className="absolute inset-0 bg-[url('/assets/brick-wall.jpg')] bg-cover bg-center opacity-80"
+          style={{ filter: 'contrast(1.1) brightness(0.8)' }}
+        ></div>
 
-        <div className="container mx-auto">
+        {/* Graffiti Overlay Container */}
+        <div className="absolute inset-0 pointer-events-none opacity-10 mix-blend-overlay">
+          {/* Abstract Scribble */}
+          <svg className="absolute top-1/3 left-10 w-64 h-64 text-tuko-green" viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="2">
+            <path d="M10,10 Q50,50 90,10" />
+            <path d="M10,90 Q50,50 90,90" />
+          </svg>
+
+          {/* "NAIROBI" Tag */}
+          <div className="absolute bottom-20 right-20 font-display text-9xl text-neutral-800 -rotate-3 blur-[1px]">
+            NAIROBI
+          </div>
+        </div>
+
+        {/* Vignette Overlay */}
+        <div className="absolute inset-0 bg-radial-gradient from-transparent via-black/40 to-black/80 pointer-events-none"></div>
+
+        <div className="container mx-auto relative z-10">
           <div className="flex flex-col md:flex-row gap-16 items-start">
             {/* Left Column: Title & Text */}
             <div className="w-full md:w-1/2">
-              <div className="inline-block border-2 border-tuko-green px-4 py-2 font-mono text-sm font-bold uppercase mb-6 shadow-[4px_4px_0_#133B2E]">
+              <div className="inline-block border-2 border-tuko-green bg-tuko-green/20 px-4 py-2 font-mono text-sm font-bold uppercase mb-6 shadow-[4px_4px_0_#133B2E] backdrop-blur-sm">
                 About The Show
               </div>
-              <h2 className="font-display text-6xl md:text-8xl uppercase text-tuko-green mb-8 leading-[0.8]">
+              <h2 className="font-display text-6xl md:text-8xl uppercase text-tuko-cream mb-8 leading-[0.8] drop-shadow-lg">
                 Raw.<br />Honest.<br /><span className="text-tuko-yellow text-shadow-neon">Chaotic.</span>
               </h2>
-              <p className="font-body text-xl text-tuko-green/80 leading-relaxed mb-8 font-medium">
+              <p className="font-body text-xl text-tuko-cream/80 leading-relaxed mb-8 font-medium">
                 Tuko Sawa is the podcast for people who pretend they’re fine but deep down are one bad day away from screaming into a pillow. It’s for the ones figuring out adulthood with Chat GPT, vibes, and trauma they joke about so it doesn’t win.
               </p>
-              <p className="font-body text-lg text-tuko-green/70 leading-relaxed">
+              <p className="font-body text-lg text-tuko-cream/70 leading-relaxed">
                 Every Friday Jay & Ghost take all the madness, heartbreaks, friendships that feel like part-time jobs, money stress, unspoken fears, and talk about it the way real people actually do: messy, funny, unfiltered, and painfully honest.
               </p>
             </div>
 
             {/* Right Column: Hosts */}
             <div className="w-full md:w-1/2 grid gap-8">
-              <div className="bg-white p-8 border-2 border-tuko-green shadow-[8px_8px_0_#133B2E] transform rotate-1 hover:rotate-0 transition-transform">
-                <h3 className="font-display text-4xl text-tuko-green mb-2">Jay</h3>
+              <div className="bg-white/5 backdrop-blur-md p-8 border-2 border-tuko-green/30 shadow-[8px_8px_0_rgba(0,0,0,0.5)] transform rotate-1 hover:rotate-0 transition-transform">
+                <h3 className="font-display text-4xl text-tuko-yellow mb-2">Jay</h3>
                 <span className="font-mono text-xs uppercase bg-tuko-green text-tuko-cream px-2 py-1">The Host</span>
-                <p className="text-tuko-green/70 mt-4">Jay is that friend who will give you terrible advice… but somehow it still works.
+                <p className="text-tuko-cream/70 mt-4">Jay is that friend who will give you terrible advice… but somehow it still works.
                   He’s chaotic, dramatic, wise by accident, and 100% unserious.
                   Expect: unfiltered takes, comedy you can’t explain to your parents, and random philosophical moments he didn’t plan.</p>
               </div>
 
-              <div className="bg-white p-8 border-2 border-tuko-green shadow-[8px_8px_0_#133B2E] transform -rotate-1 hover:rotate-0 transition-transform">
-                <h3 className="font-display text-4xl text-tuko-green mb-2">Ghost</h3>
+              <div className="bg-white/5 backdrop-blur-md p-8 border-2 border-tuko-green/30 shadow-[8px_8px_0_rgba(0,0,0,0.5)] transform -rotate-1 hover:rotate-0 transition-transform">
+                <h3 className="font-display text-4xl text-tuko-yellow mb-2">Ghost</h3>
                 <span className="font-mono text-xs uppercase bg-tuko-green text-tuko-cream px-2 py-1">Co-Host</span>
-                <p className="text-tuko-green/70 mt-4">Ghost is the mystery guy. The type of guy who says three words a day but somehow knows the president’s WiFi password. No one really knows him, not even Jay, and that’s exactly why everyone trusts him with their life. He’s the friend you call when you need advice, a reality check, a clean alibi, or a fully functional plane engine at 3AM for reasons you can’t explain.</p>
+                <p className="text-tuko-cream/70 mt-4">Ghost is the mystery guy. The type of guy who says three words a day but somehow knows the president’s WiFi password. No one really knows him, not even Jay, and that’s exactly why everyone trusts him with their life. He’s the friend you call when you need advice, a reality check, a clean alibi, or a fully functional plane engine at 3AM for reasons you can’t explain.</p>
               </div>
             </div>
           </div>
